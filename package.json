@@ -23,6 +23,7 @@
     "express": "^4.19.2",
     "image-to-base64": "^2.2.0",
     "lodash": "^4.17.21",
-    "mime-types": "^2.1.35"
+    "mime-types": "^2.1.35",
+    "xml-js": "^1.6.11"
   }
 }

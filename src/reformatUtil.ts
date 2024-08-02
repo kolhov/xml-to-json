@@ -42,14 +42,14 @@ export async function reformatData(){
       category: item?.['okruhy'][0]?.['nazev'],
       text: item.text,
       attachmentType: item?.data ? "image" : null,
-      attachment: item?.data ? await getImageString(item?.data) : null,
+      attachment: item?.data ? "data:image/png;base64," + await getImageString(item?.data) : null,
       options: [...options],
       answerIdx: answerId,
     }
   }));
 
   const jsonString = JSON.stringify(formattedJson, null, 2);
-  const filePath = path.join('.', 'output', '2024_07_26.json');
+  const filePath = path.join('.', 'output', 'old_2024_08_02.json');
 
   fs.writeFileSync(filePath, jsonString, 'utf8');
 }
